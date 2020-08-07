@@ -1,6 +1,6 @@
 # cat-charts-react
 
-> 基于 QCharts 封装的 React 图表组件库。使用上基本与 <a target="_blank" href="https://www.spritejs.com/q-charts/">QCharts</a> 一致。 <a target="_blank" href="https://www.spritejs.com/cat-charts-react/">→ 详细文档</a>
+> 基于 [qcharts](https://github.com/spritejs/q-charts) 封装的 React 图表组件库。使用上基本与 [qcharts](https://github.com/spritejs/q-charts) 一致。
 
 ## 安装
 
@@ -21,6 +21,8 @@ npm i spritejs @qcharts/core cat-charts-react
 ```
 
 ## 绘制
+
+:::demo
 
 ```javascript
 import React from 'react'
@@ -56,4 +58,4 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'))
 ```
 
-Demo：<a target="_blank" href="https://github.com/justemit/cat-charts-react-demo">Quickstart</a>
+:::
