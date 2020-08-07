@@ -2,32 +2,20 @@
   <header>
     <nav class="navbar">
       <router-link class="navbar-brand" to="/">
-        <img src="https://p4.ssl.qhimg.com/t012b75d7dfb76ce86c.png" height="40" alt="qchart">
+        <img src="https://p3.ssl.qhimg.com/t0135baffc31b23c210.png" height="40" alt="qchart">
       </router-link>
 
       <button @click="toggleShowMenu" class="navbar-toggler">
         <span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 30 30"
-            width="30"
-            height="30"
-            focusable="false"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30" focusable="false">
             <title>Menu</title>
-            <path
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-miterlimit="10"
-              d="M4 7h22M4 15h22M4 23h22"
-            ></path>
+            <path stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"></path>
           </svg>
         </span>
       </button>
 
       <div :class="showMenu ? 'is-show' : ''">
-        <Search/>
+        <Search />
         <ul class="navbar-nav">
           <li class="nav-item">
             <router-link to="/home">首页</router-link>
@@ -59,19 +47,19 @@ export default {
   },
 
   watch: {
-    $route() {
+    $route () {
       this.showMenu = false
     }
   },
 
-  data() {
+  data () {
     return {
       showMenu: false
     }
   },
 
   methods: {
-    toggleShowMenu() {
+    toggleShowMenu () {
       this.showMenu = !this.showMenu
     }
   }
@@ -156,8 +144,8 @@ header {
 
       button {
         display: block;
-        left:15px;
-        right:auto;
+        left: 15px;
+        right: auto;
       }
 
       > div {
