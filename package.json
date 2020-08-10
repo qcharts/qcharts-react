@@ -1,5 +1,5 @@
 {
-  "name": "qharts-react",
+  "name": "qcharts-react",
   "version": "1.0.1",
   "description": "A powerful React chart library based on qcharts",
   "main": "lib/index.js",
