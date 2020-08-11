@@ -7,7 +7,14 @@ const common = require('./webpack.conf.common')
 
 module.exports = merge(common, {
   entry: {
-    app: path.resolve(__dirname, '../site/')
+    app: path.resolve(__dirname, '../site/'),
+    'qcharts-react': './src'
+  },
+  output: {
+    path: path.join(__dirname, '../docs'),
+    filename: '[name].js',
+    library: 'QchartsReact',
+    libraryTarget: 'umd'
   },
   devServer: {
     contentBase: path.resolve(__dirname, '../site/'),

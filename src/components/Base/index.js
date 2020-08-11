@@ -33,12 +33,13 @@ class BaseComponent extends PureComponent {
 
   render() {
     const Component = qcharts[this.name]
+    console.log('comp', Component)
     const color = this.props.color
     const instance = new Component(this.props || {})
     this.applyStyle(instance)
     this.instance = instance
     this.context.addChild({ instance, props: this.props, color })
-    instance.color(color)
+    //instance.color(color)
     return null
   }
 }

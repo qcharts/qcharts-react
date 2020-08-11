@@ -5,20 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+import { Chart, Line, Axis, Legend, Tooltip } from 'qcharts-react'
 
 function App() {
   const data = [

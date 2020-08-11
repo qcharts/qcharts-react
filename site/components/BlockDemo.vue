@@ -1,5 +1,8 @@
 <template>
-  <div :class="['block-demo', isFullscreen ? 'block-demo--fixed' : '']" ref="block">
+  <div
+    :class="['block-demo', isFullscreen ? 'block-demo--fixed' : '']"
+    ref="block"
+  >
     <div class="preview" ref="preview">
       <div class="demo" ref="demo"></div>
     </div>
@@ -7,16 +10,26 @@
       <div class="bock-demo__ctrl">
         <!-- <button>复制</button> -->
         <span title="运行" @click="syncCode" class="icon">
-          <img src="./play.svg" alt="运行">
+          <img src="./play.svg" alt="运行" />
         </span>
-        <span v-if="!isFullscreen" title="全屏" @click="fullscreen" class="icon">
-          <img src="./full-screen.svg" alt="全屏">
+        <span
+          v-if="!isFullscreen"
+          title="全屏"
+          @click="fullscreen"
+          class="icon"
+        >
+          <img src="./full-screen.svg" alt="全屏" />
         </span>
-        <span v-if="isFullscreen" title="取消全屏" @click="fullscreen" class="icon">
-          <img src="./recovery.svg" alt="取消全屏">
+        <span
+          v-if="isFullscreen"
+          title="取消全屏"
+          @click="fullscreen"
+          class="icon"
+        >
+          <img src="./recovery.svg" alt="取消全屏" />
         </span>
         <span @click="copyCode" class="icon">
-          <img src="./code-copy.svg" alt="复制代码">
+          <img src="./code-copy.svg" alt="复制代码" />
         </span>
       </div>
       <div class="bock-demo__code">
@@ -43,7 +56,7 @@ export default {
     source: String
   },
 
-  data () {
+  data() {
     return {
       editor: null,
       visible: true,
@@ -54,16 +67,16 @@ export default {
     }
   },
 
-  mounted () {
+  mounted() {
     let tip = this.tip.split(',')
 
     try {
       tip = JSON.parse(JSON.stringify(tip))
-    } catch (e) { }
+    } catch (e) {}
 
     let innerWidth = window.innerWidth
     this.isFullscreen = tip.indexOf('fullscreen') > -1
-      ; (this.showEditor = innerWidth >= 768) && this.initSplit()
+    ;(this.showEditor = innerWidth >= 768) && this.initSplit()
 
     this.initEditor()
     try {
@@ -76,7 +89,7 @@ export default {
   },
 
   methods: {
-    copyCode () {
+    copyCode() {
       let val = this.editor.getDoc().getValue()
       let $text = this.$refs['copytxt']
       $text.value = val
@@ -85,21 +98,21 @@ export default {
       document.execCommand('copy')
       alert('复制成功！')
     },
-    toggle () {
+    toggle() {
       this.visible = !this.visible
     },
 
-    unescape (html) {
+    unescape(html) {
       return unescape(html)
     },
 
-    initSplit () {
+    initSplit() {
       Split([this.$refs['preview'], this.$refs['editor']], {
         sizes: [50, 50]
       })
     },
 
-    initEditor () {
+    initEditor() {
       this.editor = CodeMirror.fromTextArea(this.$refs['textarea'], {
         mode: 'jsx',
         extraKeys: {
@@ -114,7 +127,7 @@ export default {
       this.editor.getDoc().setValue(this.unescape(this.source))
     },
 
-    syncCode () {
+    syncCode() {
       const oDemo = this.$refs['demo']
       oDemo.innerHTML = `<iframe class="chart-frame" frameborder="0"></iframe>`
       const iframe = oDemo.querySelector('iframe')
@@ -149,7 +162,7 @@ export default {
       )
     },
 
-    fullscreen () {
+    fullscreen() {
       this.isFullscreen = !this.isFullscreen
       if (window.parent) {
         window.parent.postMessage({ fullScreen: this.isFullscreen }, '*')

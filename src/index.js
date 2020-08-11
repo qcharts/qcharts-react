@@ -4,16 +4,8 @@ import { generateComponent } from './components/Base'
 
 const version = require('../package.json').version
 
-const BlackList = [
-  'h',
-  'version',
-  'BaseVisual',
-  'BasePlugin',
-  'Chart',
-  'Dataset',
-  'Global'
-]
-
+const BlackList = ['h', 'version', 'Chart']
+console.log(qcharts)
 const components = Object.keys(qcharts).filter(t => BlackList.indexOf(t) < 0)
 
 const Components = components.reduce((a, c) => {

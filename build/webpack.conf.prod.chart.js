@@ -12,7 +12,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: 'index.js',
-    library: 'CatchartsReact',
+    library: 'QchartsReact',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },

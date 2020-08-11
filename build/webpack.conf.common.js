@@ -59,7 +59,7 @@ module.exports = {
   },
   externals: {
     spritejs: 'spritejs',
-    // 'sprite-extend-shapes': 'spriteShapes',
+    '@qcharts/core': 'qcharts',
     vue: 'Vue',
     'vue-router': 'VueRouter'
   },
