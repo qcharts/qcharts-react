@@ -36,15 +36,16 @@ function App() {
   const forceFit = true
   const lineStyle = { point: { strokeColor: '#fff' } }
   const axisStyle = { axis: false, scale: false }
+  const bottomAxisStyle = { grid: false }
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QLine smooth={true} style={lineStyle} />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis orient={'bottom'} style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip
-        title={d => d[0].date}
+        title={'标题'}
         formatter={data => `${data.date} ${data.sales}`}
       />
     </QChart>
