@@ -70,7 +70,18 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
 } from 'qcharts-react'
 
 function App() {
@@ -103,7 +114,7 @@ function App() {
         }}
         style={style}
       />
-    </QChart>>>
+    </QChart>
   )
 }
 

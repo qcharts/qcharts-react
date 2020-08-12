@@ -51,7 +51,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Pie
+      <QPie
         rose={true}
         radius={0.8}
         pos={[0, 0]}
@@ -80,7 +80,18 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
 } from 'qcharts-react'
 
 function App() {
@@ -109,7 +120,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Pie
+      <QPie
         {...{
           size: [360, 360],
           radius: 1,
@@ -132,7 +143,7 @@ function App() {
         orient={'vertical'}
         align={['right', 'center']}
       />
-    </QChart>>>
+    </QChart>
   )
 }
 

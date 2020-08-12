@@ -111,7 +111,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Bar transpose={true} barWidth={12} />
+      <QBar transpose={true} barWidth={12} />
       <QLegend align={['center', 'bottom']} />
       <QAxis style={xAxisStyle} />
       <QAxis orient={'left'} style={yAxisStyle} />

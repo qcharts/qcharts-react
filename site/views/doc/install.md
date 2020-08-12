@@ -48,7 +48,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} forceFit={true}>
-      <Bar />
+      <QBar />
       <QAxis />
       <QAxis orient={'left'} />
     </QChart>

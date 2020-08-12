@@ -76,7 +76,7 @@ function App() {
       size={size}
       forceFit={forceFit}
     >
-      <Area style={areaStyle} />
+      <QArea style={areaStyle} />
       <QLegend align={['center', 'bottom']} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />
@@ -97,7 +97,18 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
 } from 'qcharts-react'
 
 function App() {
@@ -128,14 +139,14 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Area stack={false} style={areaStyle} />
+      <QArea stack={false} style={areaStyle} />
       <QLegend align={['center', 'bottom']} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip
         formatter={data => `${data.product} ${data.year} ${data.sales}`}
       />
-    </QChart>>
+    </QChart>
   )
 }
 

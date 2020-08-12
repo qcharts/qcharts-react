@@ -46,7 +46,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Bar style={columnStyle} />
+      <QBar style={columnStyle} />
       <QLegend align={['center', 'bottom']} style={legendStyle} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />

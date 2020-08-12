@@ -87,7 +87,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Pie
+      <QPie
         style={pieStyle}
         radius={0.7}
         innerRadius={0.4}

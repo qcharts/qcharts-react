@@ -94,7 +94,18 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
 } from 'qcharts-react'
 
 const data = [
@@ -158,7 +169,7 @@ function App() {
         title={'标题'}
         formatter={data => `${data.date} ${data.sales}`}
       />
-    </QChart>>>
+    </QChart>
   )
 }
 
@@ -175,7 +186,18 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
 } from 'qcharts-react'
 
 function App() {
@@ -208,7 +230,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Bar />
+      <QBar />
       <QLine axisGap={true} style={lineStyle} />
       <QLegend align={['center', 'bottom']} />
       <QAxis />
@@ -217,7 +239,7 @@ function App() {
         title={'标题'}
         formatter={data => `${data.product} ${data.year} ${data.sales}`}
       />
-    </QChart>>>
+    </QChart>
   )
 }
 

@@ -6,8 +6,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
-} from 'cat-charts-react'
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
+} from 'qcharts-react'
 
 function App() {
   const data = [
@@ -90,7 +101,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Bar style={columnStyle} />
+      <QBar style={columnStyle} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.label}: ${d.value}`} />
@@ -111,8 +122,19 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
-} from 'cat-charts-react'
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
+} from 'qcharts-react'
 
 function App() {
   const data = [
@@ -189,12 +211,12 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Bar />
-      <QQLegend align={['center', 'bottom']} />
+      <QBar />
+      <QLegend align={['center', 'bottom']} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.product} - ${d.year} - ${d.sales}`} />
-    </QChart>>
+    </QChart>
   )
 }
 
@@ -211,8 +233,19 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import {
-QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
-} from 'cat-charts-react'
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
+} from 'qcharts-react'
 
 const data = [
   {
@@ -362,12 +395,12 @@ function App() {
       size={size}
       forceFit={forceFit}
     >
-      <Bar />
-      <QQLegend align={['center', 'bottom']} />
+      <QBar />
+      <QLegend align={['center', 'bottom']} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.year}: ${d.product}: ${d.sales}`} />
-    </QChart>>
+    </QChart>
   )
 }
 

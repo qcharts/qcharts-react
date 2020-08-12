@@ -127,7 +127,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Pie style={pieStyle} radius={0.7} pos={[0, 0]} size={['80%', '100%']} />
+      <QPie style={pieStyle} radius={0.7} pos={[0, 0]} size={['80%', '100%']} />
       <QLegend
         orient={'vertical'}
         align={['right', 'center']}

@@ -79,7 +79,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Pie
+      <QPie
         rows={data.slice(0, 4).map(d => d.name)}
         radius={0.4}
         style={pieStyle}
@@ -87,7 +87,7 @@ function App() {
         pos={[0, 0]}
         size={['80%', '100%']}
       />
-      <Pie
+      <QPie
         innerRadius={0.5}
         radius={0.7}
         color={colors2}

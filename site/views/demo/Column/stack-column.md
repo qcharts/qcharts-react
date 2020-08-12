@@ -114,7 +114,7 @@ function App() {
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Bar stack={true} />
+      <QBar stack={true} />
       <QLegend align={['center', 'bottom']} />
       <QAxis />
       <QAxis orient={'left'} style={axisStyle} />
