@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react'
+import { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 import qcharts from '@qcharts/core'
 
@@ -32,12 +32,12 @@ class BaseComponent extends PureComponent {
   }
 
   render() {
+    console.log(this.name)
     const Component = qcharts[this.name]
-    const color = this.props.color
     const instance = new Component(this.props || {})
     this.applyStyle(instance)
     this.instance = instance
-    this.context.addChild({ instance, props: this.props, color })
+    this.context.addChild({ instance, props: this.props })
     return null
   }
 }

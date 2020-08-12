@@ -5,7 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Chart, Line, Axis, Legend, Tooltip } from 'qcharts-react'
+import { QChart, QLine, QAxis, QLegend, QTooltip } from 'qcharts-react'
 function App() {
   const data = [
     { date: '05-01', catgory: '图例一', sales: 15.2 },
@@ -25,15 +25,16 @@ function App() {
   const forceFit = true
   const lineStyle = { point: { strokeColor: '#fff' } }
   const axisStyle = { axis: false, scale: false }
+  const bottomAxisStyle = { grid: false }
 
   return (
-    <Chart data={data} dataFields={dataFields}>
-      <Line style={lineStyle} />
-      <Legend align={['center', 'bottom']} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-      <Tooltip formatter={data => `${data.date} ${data.sales}`} />
-    </Chart>
+    <QChart data={data} dataFields={dataFields}>
+      <QLine style={lineStyle} />
+      <QLegend align={['center', 'bottom']} />
+      <QAxis orient={'bottom'} style={bottomAxisStyle} />
+      <QAxis orient={'left'} style={axisStyle} />
+      <QTooltip formatter={data => `${data.date} ${data.sales}`} />
+    </QChart>
   )
 }
 

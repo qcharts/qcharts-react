@@ -62,8 +62,7 @@ export class Chart extends PureComponent {
     const dataFields = this.getDataFields()
     const chart = (this.chart = new qcharts.Chart({
       container: this.domElementWrap,
-      ...this.props,
-      size: ['100%', '100%']
+      ...this.props
     }))
 
     if (this.props.theme) {
