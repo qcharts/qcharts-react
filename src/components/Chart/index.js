@@ -58,6 +58,7 @@ export class Chart extends PureComponent {
 
   componentDidMount() {
     const data = this.getData()
+    console.log('abc')
     const dataFields = this.getDataFields()
     const chart = (this.chart = new qcharts.Chart({
       container: this.domElementWrap,
@@ -79,10 +80,8 @@ export class Chart extends PureComponent {
           : chart.dataset.selectCols(props.cols)
         instance.source(source)
       }
-
-      chart.add(instance)
+      chart.append(instance)
     })
-    chart.render()
   }
 
   getContainer = ref => {

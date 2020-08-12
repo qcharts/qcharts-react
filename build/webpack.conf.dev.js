@@ -14,7 +14,8 @@ module.exports = merge(common, {
     path: path.join(__dirname, '../docs'),
     filename: '[name].js',
     library: 'QchartsReact',
-    libraryTarget: 'umd'
+    libraryTarget: 'umd',
+    libraryExport: 'default'
   },
   devServer: {
     contentBase: path.resolve(__dirname, '../site/'),

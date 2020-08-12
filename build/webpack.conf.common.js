@@ -60,6 +60,7 @@ module.exports = {
   externals: {
     spritejs: 'spritejs',
     '@qcharts/core': 'qcharts',
+    'qcharts-react': 'QchartsReact',
     vue: 'Vue',
     'vue-router': 'VueRouter'
   },
