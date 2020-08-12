@@ -5,20 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+import { QChart, QLine, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -51,16 +38,16 @@ function App() {
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Line smooth={true} style={lineStyle} />
-      <Legend align={['center', 'bottom']} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-      <Tooltip
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+      <QLine smooth={true} style={lineStyle} />
+      <QLegend align={['center', 'bottom']} />
+      <QAxis />
+      <QAxis orient={'left'} style={axisStyle} />
+      <QTooltip
         title={d => d[0].date}
         formatter={data => `${data.date} ${data.sales}`}
       />
-    </Chart>
+    </QChart>
   )
 }
 

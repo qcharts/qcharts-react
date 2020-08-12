@@ -32,7 +32,6 @@ class BaseComponent extends PureComponent {
   }
 
   render() {
-    console.log(this.name)
     const Component = qcharts[this.name]
     const instance = new Component(this.props || {})
     this.applyStyle(instance)
