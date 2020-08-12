@@ -29,7 +29,7 @@ const gauge = new Gauge({
   min: 0,
   max: 1000,
   tickStep: 200,
-  title: '标题',
+  title: title={'标题'},
   subTitle: '副标题'
 })
 

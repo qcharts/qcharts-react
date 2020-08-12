@@ -27,7 +27,7 @@ npm i spritejs @qcharts/core cat-charts-react
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Chart, Bar, Axis } from 'cat-charts-react'
+import { Chart, Bar, Axis } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -47,11 +47,11 @@ function App() {
   }
 
   return (
-    <Chart data={data} dataFields={dataFields} forceFit={true}>
+    <QChart data={data} dataFields={dataFields} forceFit={true}>
       <Bar />
-      <Axis />
-      <Axis orient={'left'} />
-    </Chart>
+      <QAxis />
+      <QAxis orient={'left'} />
+    </QChart>
   )
 }
 

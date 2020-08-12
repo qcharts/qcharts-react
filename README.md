@@ -45,11 +45,11 @@ function App() {
   }
 
   return (
-    <Chart data={data} dataFields={dataFields} forceFit={true}>
+    <QChart data={data} dataFields={dataFields} forceFit={true}>
       <Bar />
       <Axis />
       <Axis orient={'left'} />
-    </Chart>
+    </QChart>
   )
 }
 

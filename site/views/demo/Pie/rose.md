@@ -6,19 +6,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
+} from 'qcharts-react'
 
 function App() {
   const data = [
@@ -50,7 +50,7 @@ function App() {
   }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <Pie
         rose={true}
         radius={0.8}
@@ -58,12 +58,12 @@ function App() {
         size={['80%', '100%']}
         style={pieStyle}
       />
-      <Legend
+      <QLegend
         style={legendStyle}
         orient={'vertical'}
         align={['right', 'center']}
       />
-    </Chart>
+    </QChart>
   )
 }
 
@@ -80,19 +80,8 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+} from 'qcharts-react'
 
 function App() {
   const data = [
@@ -119,7 +108,7 @@ function App() {
   }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <Pie
         {...{
           size: [360, 360],
@@ -129,8 +118,8 @@ function App() {
           endAngle: Math.PI * 1.5
         }}
       />
-      <Axis />
-      <Axis
+      <QAxis />
+      <QAxis
         {...{
           orient: 'right',
           grid: true,
@@ -138,12 +127,12 @@ function App() {
           coordPos: ['100%', '100%']
         }}
       />
-      <Legend
+      <QLegend
         style={legendStyle}
         orient={'vertical'}
         align={['right', 'center']}
       />
-    </Chart>
+    </QChart>>>
   )
 }
 

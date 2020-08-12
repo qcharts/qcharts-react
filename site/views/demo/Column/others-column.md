@@ -6,18 +6,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
+QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
 } from 'cat-charts-react'
 
 function App() {
@@ -100,12 +89,12 @@ function App() {
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <Bar style={columnStyle} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-      <Tooltip formatter={d => `${d.label}: ${d.value}`} />
-    </Chart>
+      <QAxis />
+      <QAxis orient={'left'} style={axisStyle} />
+      <QTooltip formatter={d => `${d.label}: ${d.value}`} />
+    </QChart>
   )
 }
 
@@ -122,18 +111,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
+QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
 } from 'cat-charts-react'
 
 function App() {
@@ -210,13 +188,13 @@ function App() {
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <Bar />
-      <Legend align={['center', 'bottom']} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-      <Tooltip formatter={d => `${d.product} - ${d.year} - ${d.sales}`} />
-    </Chart>
+      <QQLegend align={['center', 'bottom']} />
+      <QAxis />
+      <QAxis orient={'left'} style={axisStyle} />
+      <QTooltip formatter={d => `${d.product} - ${d.year} - ${d.sales}`} />
+    </QChart>>
   )
 }
 
@@ -233,18 +211,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
+QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
 } from 'cat-charts-react'
 
 const data = [
@@ -389,18 +356,18 @@ function App() {
   }, 2000)
 
   return (
-    <Chart
+    <QChart
       data={currentData}
       dataFields={dataFields}
       size={size}
       forceFit={forceFit}
     >
       <Bar />
-      <Legend align={['center', 'bottom']} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-      <Tooltip formatter={d => `${d.year}: ${d.product}: ${d.sales}`} />
-    </Chart>
+      <QQLegend align={['center', 'bottom']} />
+      <QAxis />
+      <QAxis orient={'left'} style={axisStyle} />
+      <QTooltip formatter={d => `${d.year}: ${d.product}: ${d.sales}`} />
+    </QChart>>
   )
 }
 

@@ -45,7 +45,7 @@ function App() {
       <QAxis orient={'bottom'} style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip
-        title={'标题'}
+        title={title={'标题'}}
         formatter={data => `${data.date} ${data.sales}`}
       />
     </QChart>

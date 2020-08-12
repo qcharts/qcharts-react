@@ -8,19 +8,19 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
+} from 'qcharts-react'
 
 const data = [
   { product: '茶叶', year: '2016', sales: 81.2 },
@@ -70,17 +70,17 @@ function App() {
   setTimeout(() => setData(newData), 4000)
 
   return (
-    <Chart
+    <QChart
       data={currentData}
       dataFields={dataFields}
       size={size}
       forceFit={forceFit}
     >
       <Area style={areaStyle} />
-      <Legend align={['center', 'bottom']} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-    </Chart>
+      <QLegend align={['center', 'bottom']} />
+      <QAxis />
+      <QAxis orient={'left'} style={axisStyle} />
+    </QChart>
   )
 }
 
@@ -97,19 +97,8 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+QChart,QArea,QLine,QPie,QBar,QRadar,QScatter,QGauge,QFunnel,QAxis,QLegend,QTooltip
+} from 'qcharts-react'
 
 function App() {
   const data = [
@@ -138,15 +127,15 @@ function App() {
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <Area stack={false} style={areaStyle} />
-      <Legend align={['center', 'bottom']} />
-      <Axis />
-      <Axis orient={'left'} style={axisStyle} />
-      <Tooltip
+      <QLegend align={['center', 'bottom']} />
+      <QAxis />
+      <QAxis orient={'left'} style={axisStyle} />
+      <QTooltip
         formatter={data => `${data.product} ${data.year} ${data.sales}`}
       />
-    </Chart>
+    </QChart>>
   )
 }
 

@@ -6,19 +6,19 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'cat-charts-react'
+  QChart,
+  QArea,
+  QLine,
+  QPie,
+  QBar,
+  QRadar,
+  QScatter,
+  QGauge,
+  QFunnel,
+  QAxis,
+  QLegend,
+  QTooltip
+} from 'qcharts-react'
 
 const data = [
   {
@@ -139,7 +139,7 @@ function App() {
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <Chart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <Scatter
         {...{
           areaField: 'z',
@@ -150,16 +150,16 @@ function App() {
           }
         }}
       />
-      <Axis />
-      <Axis orient={'left'} />
-      <Tooltip
+      <QAxis />
+      <QAxis orient={'left'} />
+      <QTooltip
         {...{
           formatter: data => {
             return `${data.name} x：${data.x} y：${data.y} z：${data.z}`
           }
         }}
       />
-    </Chart>
+    </QChart>
   )
 }
 
