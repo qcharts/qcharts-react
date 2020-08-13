@@ -78,26 +78,19 @@ function App() {
   ]
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
+      <QPie
+        innerRadius={0.5}
+        radius={0.7}
+        rows={data.slice(4).map(d => d.name)}
+        style={pie2Style}
+      />
       <QPie
         rows={data.slice(0, 4).map(d => d.name)}
         radius={0.4}
         style={pieStyle}
-        color={colors1}
-        pos={[0, 0]}
-        size={['80%', '100%']}
-      />
-      <QPie
-        innerRadius={0.5}
-        radius={0.7}
-        color={colors2}
-        rows={data.slice(4).map(d => d.name)}
-        style={pie2Style}
-        pos={[0, 0]}
-        size={['80%', '100%']}
       />
       <QLegend
-        color={[].concat(colors1, colors2)}
         orient={'vertical'}
         align={['right', 'center']}
         style={legendStyle}

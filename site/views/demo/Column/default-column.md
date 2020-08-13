@@ -43,12 +43,12 @@ function App() {
   }
   const axisStyle = { axis: false, scale: false }
   const legendStyle = { text: { text: '图例一' } }
-
+  const bottomAxisStyle = { grid: false }
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QBar style={columnStyle} />
       <QLegend align={['center', 'bottom']} style={legendStyle} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.label}: ${d.value}`} />
     </QChart>

@@ -66,12 +66,13 @@ function App() {
     'line:hover': { color: '#fa3300' }
   }
   const axisStyle = { axis: false, scale: false }
+  const bottomAxisStyle = { grid: false }
 
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QLine smooth={true} style={lineStyle} />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip
         title={'标题'}
@@ -149,7 +150,7 @@ function App() {
   const forceFit = true
   const lineStyle = { point: { strokeColor: '#fff' } }
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   setTimeout(() => {
     setData(newData)
   }, 4000)
@@ -163,7 +164,7 @@ function App() {
     >
       <QLine smooth={true} style={lineStyle} />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip
         title={'标题'}
@@ -227,13 +228,13 @@ function App() {
     'symbol:hover': { fillColor: '#f00' }
   }
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QBar />
       <QLine axisGap={true} style={lineStyle} />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip
         title={'标题'}

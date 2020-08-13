@@ -76,12 +76,12 @@ function App() {
   const size = ['100%', '100%']
   const forceFit = true
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QBar transpose={false} barWidth={20} />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.product} - ${d.year} - ${d.sales}`} />
     </QChart>

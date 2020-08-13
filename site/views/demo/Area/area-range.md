@@ -54,16 +54,15 @@ function App() {
         return { fillColor: 'rgba(0,0,0,0.05)' }
       }
     },
-    point: { fillColor: 'transparent', strokeColor: '#fff' },
-    'point:hover': { strokeColor: '#fff' }
+    point: false
   }
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QArea style={areaStyle} />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={data => `${data.date} ${data.sales}`} />
     </QChart>

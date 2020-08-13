@@ -33,76 +33,13 @@ function App() {
     value: 'value',
     text: 'label'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
-  const columnStyle = {
-    pillar: (attrs, d, i) => {
-      if (i % 2 === 0) {
-        return {
-          border: { width: 1 },
-          borderRadius: 20,
-          fillColor: {
-            vector: [0, 0, 0, 100],
-            colors: [
-              { color: '#9861E5', offset: 0 },
-              { color: '#ADDF84', offset: 1 }
-            ]
-          }
-        }
-      }
-      return {
-        border: { width: 1 },
-        opacity: 1.0,
-        fillColor: {
-          vector: [0, 0, 0, 100],
-          colors: [
-            { color: '#84E0BE', offset: 0 },
-            { color: '#FBD54A', offset: 1 }
-          ]
-        },
-        borderRadius: 20
-      }
-    },
-    'pillar:hover': (attrs, data, i) => {
-      if (i % 2 === 0) {
-        return {
-          borderRadius: 10
-        }
-      }
-      return { opacity: 0.5, fillColor: '#FC6980' }
-    },
-    text: (attrs, data, i) => {
-      let anchor = attrs.anchor || [0, 0]
-      let size = attrs.size
-      let pos = attrs.pos
-      return {
-        rotate: 0,
-        text: data.value,
-        anchor: [0.5, 1],
-        pos: [pos[0] + size[0] / 2, pos[1] - size[1]]
-      }
-    },
-    'text:hover': (attrs, data, i) => {
-      let anchor = attrs.anchor || [0, 0]
-      let size = attrs.size
-      let pos = attrs.pos
-      return {
-        font: '22px "宋体"',
-        rotate: 0,
-        text: data.value,
-        anchor: [0.5, 1],
-        pos: [pos[0] + size[0] / 2, pos[1] - size[1]]
-      }
-    },
-    backgroundpillar: { borderRadius: 10 },
-    'backgroundpillar:hover': { borderRadius: 20 }
-  }
+  const columnStyle = {}
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QBar style={columnStyle} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.label}: ${d.value}`} />
     </QChart>
@@ -208,12 +145,12 @@ function App() {
   const size = ['100%', '100%']
   const forceFit = true
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   return (
     <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
       <QBar />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.product} - ${d.year} - ${d.sales}`} />
     </QChart>
@@ -380,24 +317,17 @@ function App() {
     value: 'sales',
     text: 'product'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
   const axisStyle = { axis: false, scale: false }
-
+  const bottomAxisStyle = { grid: false }
   setTimeout(() => {
     setData(dataNew)
   }, 2000)
 
   return (
-    <QChart
-      data={currentData}
-      dataFields={dataFields}
-      size={size}
-      forceFit={forceFit}
-    >
+    <QChart data={currentData} dataFields={dataFields}>
       <QBar />
       <QLegend align={['center', 'bottom']} />
-      <QAxis />
+      <QAxis style={bottomAxisStyle} />
       <QAxis orient={'left'} style={axisStyle} />
       <QTooltip formatter={d => `${d.year}: ${d.product}: ${d.sales}`} />
     </QChart>
