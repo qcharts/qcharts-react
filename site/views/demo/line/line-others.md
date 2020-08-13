@@ -7,20 +7,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QLine, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -44,26 +31,7 @@ function App() {
     text: 'product'
   }
 
-  const lineStyle = {
-    point: { pointType: 'star', size: 8, strokeColor: '#fff' },
-    'point:hover': function(attrs, data, i, j) {
-      //设置symbol样式
-      if (data.sales > 60) {
-        return { scale: 1.4 }
-      } else if (data.sales > 30) {
-        return { fillColor: '#0ff' }
-      } else {
-        return { fillColor: '#0f0' }
-      }
-    },
-    guideline: { fillColor: '#ff0' },
-    line: function(attrs, data, i) {
-      if (i === 1) {
-        return { color: '#00fafc' }
-      }
-    },
-    'line:hover': { color: '#fa3300' }
-  }
+  const lineStyle = {}
   const axisStyle = { axis: false, scale: false }
   const bottomAxisStyle = { grid: false }
 
@@ -93,20 +61,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 ```javascript
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QLine, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 const data = [
   { product: '茶叶', year: '2016', sales: 81.2 },
@@ -154,12 +109,7 @@ function App() {
   }, 4000)
 
   return (
-    <QChart
-      data={currentData}
-      dataFields={dataFields}
-      size={size}
-      forceFit={forceFit}
-    >
+    <QChart data={currentData} dataFields={dataFields}>
       <QLine smooth={true} style={lineStyle} />
       <QLegend align={['center', 'bottom']} />
       <QAxis style={bottomAxisStyle} />
@@ -184,20 +134,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 ```javascript
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QLine, QBar, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -222,7 +159,7 @@ function App() {
 
   const lineStyle = {
     point: { strokeColor: '#fff' },
-    'symbol:hover': { fillColor: '#f00' }
+    'point:hover': { fillColor: '#f00' }
   }
   const axisStyle = { axis: false, scale: false }
   const bottomAxisStyle = { grid: false }

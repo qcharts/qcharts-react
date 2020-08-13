@@ -5,20 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QFunnel, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -46,8 +33,12 @@ function App() {
     <QChart data={data} dataFields={dataFields}>
       <QFunnel
         {...{
-          size: ['25%', '70%'],
-          pos: ['22%', '20%'],
+          clientRect: {
+            left: '22%',
+            top: '20%',
+            width: '25%',
+            height: '70%'
+          },
           align: 'right',
           pyramid: true
         }}
@@ -55,8 +46,12 @@ function App() {
       />
       <QFunnel
         {...{
-          size: ['25%', '70%'],
-          pos: ['50%', '20%'],
+          clientRect: {
+            left: '50%',
+            top: '20%',
+            width: '25%',
+            height: '70%'
+          },
           align: 'left',
           pyramid: true
         }}

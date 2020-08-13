@@ -13,8 +13,10 @@ class BaseComponent extends PureComponent {
   }
 
   applyStyle = instance => {
-    const style = this.props.style
-
+    const { style, theme } = this.props
+    if (theme) {
+      instance.theme.set(theme)
+    }
     if (!style || typeof style !== 'object') {
       return
     }

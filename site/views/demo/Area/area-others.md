@@ -7,20 +7,7 @@
 ```javascript
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QArea, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 const data = [
   { product: '茶叶', year: '2016', sales: 81.2 },
@@ -68,12 +55,7 @@ function App() {
   setTimeout(() => setData(newData), 4000)
 
   return (
-    <QChart
-      data={currentData}
-      dataFields={dataFields}
-      size={size}
-      forceFit={forceFit}
-    >
+    <QChart data={currentData} dataFields={dataFields}>
       <QArea style={areaStyle} />
       <QLegend align={['center', 'bottom']} />
       <QAxis style={bottomAxisStyle} />
@@ -94,20 +76,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QArea, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [

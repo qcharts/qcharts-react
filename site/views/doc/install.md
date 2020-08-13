@@ -1,4 +1,4 @@
-# cat-charts-react
+# qcharts-react
 
 > 基于 [qcharts](https://github.com/spritejs/q-charts) 封装的 React 图表组件库。使用上基本与 [qcharts](https://github.com/spritejs/q-charts) 一致。
 
@@ -7,17 +7,17 @@
 ### npm
 
 ```shell
-npm i spritejs @qcharts/core cat-charts-react
+npm i spritejs @qcharts/core qcharts-react
 ```
 
 ### CDN
 
-在 HTML 文件依次引入 `spritejs`、`@qcharts/core` 和 `cat-charts-react`
+在 HTML 文件依次引入 `spritejs`、`@qcharts/core` 和 `qcharts-react`
 
 ```html
-<script src="https://unpkg.com/spritejs/dist/spritejs.min.js"></script>
-<script src="https://unpkg.com/@qcharts/core/lib/index.js"></script>
-<script src="https://unpkg.com/cat-charts-react/lib/index.js"></script>
+<script src="https://unpkg.com/spritejs@3/dist/spritejs.min.js"></script>
+<script src="https://unpkg.com/@qcharts/core@1/lib/index.js"></script>
+<script src="https://unpkg.com/qcharts-react/lib/index.js"></script>
 ```
 
 ## 绘制
@@ -27,7 +27,7 @@ npm i spritejs @qcharts/core cat-charts-react
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Chart, Bar, Axis } from 'qcharts-react'
+import { QChart, QBar, QAxis, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -45,12 +45,13 @@ function App() {
     value: 'value',
     text: 'label'
   }
-
+  const axisStyle = { grid: false }
   return (
     <QChart data={data} dataFields={dataFields} forceFit={true}>
       <QBar />
-      <QAxis />
+      <QAxis style={axisStyle} />
       <QAxis orient={'left'} />
+      <QTooltip />
     </QChart>
   )
 }

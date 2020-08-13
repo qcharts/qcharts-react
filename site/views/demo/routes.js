@@ -14,6 +14,7 @@ import WordCloudRoutes from './WordCloud/routes'
 import scatterRoutes from './scatter'
 import gaugeRoutes from './Gauge/routes'
 import VisualLinksRoutes from './VisualLink/routes'
+import PolarBarRoutes from './PolarBar/routes'
 
 export default [
   {
@@ -92,6 +93,12 @@ export default [
     path: 'radialBar',
     component: generateCommonPage('/demo/radialBar/', RadialBarRoutes),
     children: RadialBarRoutes
+  },
+  {
+    title: '南丁格尔图',
+    path: 'PolarBar',
+    component: generateCommonPage('/demo/PolarBar/', PolarBarRoutes),
+    children: PolarBarRoutes
   }
 
   // {

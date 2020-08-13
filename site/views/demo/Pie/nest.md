@@ -5,20 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QPie, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -45,21 +32,11 @@ function App() {
   }
 
   const pieStyle = {
-    text: attrs => ({ color: '#fff', text: attrs.name })
+    guideText: { bgcolor: 'rgba(255,255,255,0.7)', borderRadius: 2 }
   }
-  const pie2Style = {
-    guideLine: true,
-    guideText: { fontSize: '12px' }
-  }
+  const pie2Style = {}
 
-  const legendStyle = {
-    icon: (attrs, d, i) => ({
-      marginTop: i > 0 ? 10 : 0
-    }),
-    text: (attrs, d, i) => ({
-      marginTop: i > 0 ? 10 : 0
-    })
-  }
+  const legendStyle = {}
 
   const colors1 = ['#5982F6', '#59CB74', '#DA65CC', '#FC6980']
   const colors2 = [
@@ -74,19 +51,24 @@ function App() {
     '#F79452',
     '#E37474'
   ]
-
+  const colors = colors1.concat(colors2)
+  const theme = { colors }
+  const theme1 = { colors: colors1 }
+  const theme2 = { colors: colors2 }
   return (
-    <QChart data={data} dataFields={dataFields}>
+    <QChart data={data} dataFields={dataFields} theme={theme}>
       <QPie
         innerRadius={0.5}
         radius={0.7}
         rows={data.slice(4).map(d => d.name)}
         style={pie2Style}
+        theme={theme2}
       />
       <QPie
         rows={data.slice(0, 4).map(d => d.name)}
         radius={0.4}
         style={pieStyle}
+        theme={theme1}
       />
       <QLegend
         orient={'vertical'}

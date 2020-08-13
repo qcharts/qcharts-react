@@ -55,12 +55,17 @@ export class Chart extends PureComponent {
   componentDidMount() {
     const data = this.getData()
     const dataFields = this.getDataFields()
+    const { theme } = this.props
+    console.log(theme)
     const chart = (this.chart = new qcharts.Chart({
       container: this.domElementWrap,
       ...this.props
     }))
     if (data && data.length) {
       chart.source(data, dataFields)
+    }
+    if (theme) {
+      qcharts.theme.set(theme)
     }
     this.children.forEach(({ instance, props }) => {
       if (props.rows || props.cols) {

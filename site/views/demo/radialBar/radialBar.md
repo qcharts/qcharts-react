@@ -46,7 +46,7 @@ function App() {
   }
 
   const radialBarStyle = {
-    arc: { lineCap: 'round', anticlockwise: true }
+    arc: { lineCap: 'round' }
   }
 
   return (
@@ -56,8 +56,6 @@ function App() {
         max={10000}
         radius={0.6}
         style={radialBarStyle}
-        pos={[0, 0]}
-        size={['80%', '100%']}
         lineWidth={10}
       />
       <QLegend orient={'vertical'} align={['right', 'center']} />

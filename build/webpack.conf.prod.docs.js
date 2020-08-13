@@ -5,11 +5,18 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const common = require('./webpack.conf.common')
 
 module.exports = merge(common, {
-  entry: path.resolve(__dirname, '../site/'),
+  entry: {
+    main: path.resolve(__dirname, '../site/'),
+    'qcharts-react': './src'
+  },
+  devtool: 'source-map',
   output: {
     path: path.join(__dirname, '../docs'),
-    filename: '[name].[hash].js',
-    chunkFilename: '[name].[hash:7].js'
+    filename: '[name].js',
+    library: 'QchartsReact',
+    libraryExport: 'default',
+    libraryTarget: 'umd',
+    chunkFilename: '[name].js?v=[hash:7]'
   },
   module: {
     rules: [

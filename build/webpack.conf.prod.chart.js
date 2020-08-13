@@ -9,6 +9,7 @@ const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 module.exports = {
   mode: 'production',
   entry: './src',
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, '../lib'),
     filename: 'index.js',

@@ -5,20 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QBar, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -58,20 +45,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QBar, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -168,20 +142,7 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 ```javascript
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QBar, QRadar, QAxis, QLegend, QTooltip } from 'qcharts-react'
 
 const data = [
   {
