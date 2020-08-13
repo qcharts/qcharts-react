@@ -1,6 +1,6 @@
 {
   "name": "qcharts-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A powerful React chart library based on qcharts",
   "main": "lib/index.js",
   "scripts": {
@@ -14,7 +14,7 @@
     "visualization",
     "react",
     "qcharts",
-    "cat-charts-react"
+    "qcharts-react"
   ],
   "author": "justemit",
   "license": "MIT",

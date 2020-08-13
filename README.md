@@ -1,23 +1,23 @@
-# cat-charts-react
+# qcharts-react
 
-> 基于 QCharts 封装的 React 图表组件库。使用上基本与 <a target="_blank" href="https://www.spritejs.com/q-charts/">QCharts</a> 一致。 <a target="_blank" href="https://www.spritejs.com/cat-charts-react/">→ 详细文档</a>
+> 基于 QCharts 封装的 React 图表组件库。使用上基本与 <a target="_blank" href="https://www.spritejs.com/q-charts/">QCharts</a> 一致。 <a target="_blank" href="https://www.spritejs.com/qcharts-react/">→ 详细文档</a>
 
 ## 安装
 
 ### npm
 
 ```shell
-npm i spritejs @qcharts/core cat-charts-react
+npm i spritejs @qcharts/core qcharts-react
 ```
 
 ### CDN
 
-在 HTML 文件依次引入 `spritejs`、`@qcharts/core` 和 `cat-charts-react`
+在 HTML 文件依次引入 `spritejs`、`@qcharts/core` 和 `qcharts-react`
 
 ```html
-<script src="https://unpkg.com/spritejs/dist/spritejs.min.js"></script>
-<script src="https://unpkg.com/@qcharts/core/lib/index.js"></script>
-<script src="https://unpkg.com/cat-charts-react/lib/index.js"></script>
+<script src="https://unpkg.com/spritejs@3/dist/spritejs.min.js"></script>
+<script src="https://unpkg.com/@qcharts/core@1/lib/index.js"></script>
+<script src="https://unpkg.com/qcharts-react/lib/index.js"></script>
 ```
 
 ## 绘制
@@ -25,7 +25,7 @@ npm i spritejs @qcharts/core cat-charts-react
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Chart, Bar, Axis } from 'cat-charts-react'
+import { Chart, Bar, Axis } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -55,5 +55,3 @@ function App() {
 
 ReactDOM.render(<App />, document.querySelector('#app'))
 ```
-
-Demo：<a target="_blank" href="https://github.com/justemit/cat-charts-react-demo">Quickstart</a>
