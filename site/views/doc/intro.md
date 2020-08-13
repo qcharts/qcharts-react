@@ -16,18 +16,18 @@
 
 ### Visual 组件
 
-| 名称            | 类型        | 描述                       |
-| --------------- | ----------- | -------------------------- |
-| `<QLine />`     | Visual 组件 | 绘制折线图图形             |
-| `<QArea />`     | Visual 组件 | 绘制面积图图形             |
-| `<QBar />`      | Visual 组件 | 绘制柱状图（或条形图）图形 |
-| `<QPie />`      | Visual 组件 | 绘制饼图图形               |
-| `<ArcPie />`    | Visual 组件 | 绘制弧饼图图形             |
-| `<Radar />`     | Visual 组件 | 绘制雷达图图形             |
-| `<Scatter />`   | Visual 组件 | 绘制散点图图图形           |
-| `<Funnel />`    | Visual 组件 | 绘制漏斗图图形             |
-| `<Gauge />`     | Visual 组件 | 绘制仪表盘图形             |
-| `<RadialBar />` | Visual 组件 | 绘制玉玦图图形             |
+| 名称             | 类型        | 描述                       |
+| ---------------- | ----------- | -------------------------- |
+| `<QLine />`      | Visual 组件 | 绘制折线图图形             |
+| `<QArea />`      | Visual 组件 | 绘制面积图图形             |
+| `<QBar />`       | Visual 组件 | 绘制柱状图（或条形图）图形 |
+| `<QPie />`       | Visual 组件 | 绘制饼图图形               |
+| `<ArcPie />`     | Visual 组件 | 绘制弧饼图图形             |
+| `<QRadar />`     | Visual 组件 | 绘制雷达图图形             |
+| `<QScatter />`   | Visual 组件 | 绘制散点图图图形           |
+| `<QFunnel />`    | Visual 组件 | 绘制漏斗图图形             |
+| `<QGauge />`     | Visual 组件 | 绘制仪表盘图形             |
+| `<QRadialBar />` | Visual 组件 | 绘制玉玦图图形             |
 
 ### Plugin 组件
 

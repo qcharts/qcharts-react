@@ -142,12 +142,11 @@ function App() {
     value: 'sales',
     text: 'product'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
+
   const axisStyle = { axis: false, scale: false }
   const bottomAxisStyle = { grid: false }
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QBar />
       <QLegend align={['center', 'bottom']} />
       <QAxis style={bottomAxisStyle} />

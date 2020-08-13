@@ -134,13 +134,12 @@ function App() {
     text: 'x',
     value: 'y'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
+
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Scatter
+    <QChart data={data} dataFields={dataFields}>
+      <QScatter
         {...{
           areaField: 'z',
           labelField: 'name',

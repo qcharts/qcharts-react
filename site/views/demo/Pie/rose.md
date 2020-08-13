@@ -32,8 +32,6 @@ function App() {
     row: 'name',
     value: 'value'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
 
   const pieStyle = {
     sector: { lineWidth: 1, strokeColor: '#fff' },
@@ -50,7 +48,7 @@ function App() {
   }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QPie
         rose={true}
         radius={0.8}
@@ -106,8 +104,6 @@ function App() {
     row: 'name',
     value: 'value'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
 
   const legendStyle = {
     icon: (attrs, d, i) => ({
@@ -119,7 +115,7 @@ function App() {
   }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QPie
         {...{
           size: [360, 360],

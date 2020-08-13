@@ -5,21 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  Chart,
-  Area,
-  Line,
-  Pie,
-  ArcPie,
-  Bar,
-  Radar,
-  Scatter,
-  Gauge,
-  Funnel,
-  Axis,
-  Legend,
-  Tooltip
-} from 'qcharts-react'
+import { QChart, QPie, QLegend, QTooltip } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -47,37 +33,21 @@ function App() {
     row: 'type',
     value: 'count'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
 
-  const style = {
-    arc: { lineCap: 'round' }
-  }
+  const style = {}
 
-  const legendStyle = {
-    icon: (attrs, d, i) => ({
-      marginTop: i > 0 ? 10 : 0
-    }),
-    text: (attrs, d, i) => ({
-      marginTop: i > 0 ? 10 : 0
-    })
-  }
+  const legendStyle = {}
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <ArcPie
+    <QChart data={data} dataFields={dataFields}>
+      <QPie
         style={style}
+        innerRadius={0.1}
+        startAngle={180}
+        endAngle={360}
         radius={0.7}
-        pos={[0, 0]}
-        size={['80%', '100%']}
-        lineWidth={20}
-        padAngle={0.3}
       />
-      <QLegend
-        orient={'vertical'}
-        align={['right', 'center']}
-        style={legendStyle}
-      />
+      <QLegend style={legendStyle} />
     </QChart>
   )
 }

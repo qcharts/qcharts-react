@@ -36,8 +36,7 @@ function App() {
     value: 'value',
     text: 'label'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
+
   const columnStyle = {
     pillar: { fillColor: '#47A1FF' }
   }
@@ -45,7 +44,7 @@ function App() {
   const legendStyle = { text: { text: '图例一' } }
   const bottomAxisStyle = { grid: false }
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QBar style={columnStyle} />
       <QLegend align={['center', 'bottom']} style={legendStyle} />
       <QAxis style={bottomAxisStyle} />

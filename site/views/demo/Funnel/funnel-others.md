@@ -35,8 +35,6 @@ function App() {
     text: 'label',
     sort: (a, b) => b.value - a.value
   }
-  const size = ['100%', '100%']
-  const forceFit = true
 
   const style = {
     guideLine: true,
@@ -45,8 +43,8 @@ function App() {
   }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Funnel
+    <QChart data={data} dataFields={dataFields}>
+      <QFunnel
         {...{
           size: ['25%', '70%'],
           pos: ['22%', '20%'],
@@ -55,7 +53,7 @@ function App() {
         }}
         style={style}
       />
-      <Funnel
+      <QFunnel
         {...{
           size: ['25%', '70%'],
           pos: ['50%', '20%'],

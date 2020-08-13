@@ -5,11 +5,7 @@ import qcharts from '@qcharts/core'
 export class Chart extends PureComponent {
   static propTypes = {
     data: PropTypes.array,
-    dataFields: PropTypes.object,
-    size: PropTypes.arrayOf(
-      PropTypes.oneOfType([PropTypes.string, PropTypes.number])
-    ),
-    forceFit: PropTypes.bool
+    dataFields: PropTypes.object
   }
 
   static childContextTypes = {
@@ -48,7 +44,7 @@ export class Chart extends PureComponent {
   }
 
   componentWillReceiveProps(nextProps) {
-    const { data, dataFields = {} } = nextProps
+    const { data = [], dataFields = {} } = nextProps
     this.chart.attr(nextProps)
 
     if (data) {
@@ -63,14 +59,9 @@ export class Chart extends PureComponent {
       container: this.domElementWrap,
       ...this.props
     }))
-
-    if (this.props.theme) {
-      try {
-        chart.setTheme(this.props.theme)
-      } catch (e) {}
+    if (data && data.length) {
+      chart.source(data, dataFields)
     }
-
-    chart.source(data, dataFields)
     this.children.forEach(({ instance, props }) => {
       if (props.rows || props.cols) {
         let source = props.rows
@@ -89,10 +80,8 @@ export class Chart extends PureComponent {
   }
 
   render() {
-    const { size } = this.props
-
     return (
-      <div ref={this.getContainer} style={{ width: size[0], height: size[1] }}>
+      <div ref={this.getContainer} style={{ width: '100%', height: '100%' }}>
         {this.props.children}
       </div>
     )

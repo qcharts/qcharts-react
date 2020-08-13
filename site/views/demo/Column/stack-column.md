@@ -108,12 +108,11 @@ function App() {
     value: 'value',
     text: 'data'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
+
   const axisStyle = { axis: false, scale: false }
   const bottomAxisStyle = { grid: false }
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QBar stack={true} />
       <QLegend align={['center', 'bottom']} />
       <QAxis style={bottomAxisStyle} />

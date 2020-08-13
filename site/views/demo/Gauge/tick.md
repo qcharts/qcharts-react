@@ -7,47 +7,24 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QGauge, QTooltip } from 'qcharts-react'
 
 function App() {
-  const data = [
-    {
-      value: 7.3
-    }
-  ]
-  const dataFields = {
-    value: 'value'
-  }
-  const size = ['100%', '100%']
-  const forceFit = true
-
   const style = {
     title: { fontSize: 36 }
   }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Gauge
+    <QChart>
+      <QGauge
         {...{
           min: 0,
-          max: 10,
-          tickStep: 1,
+          max: 100,
+          lineWidth: 20,
+          tickStep: 10,
           tickLength: -10,
-          title: d => `${d.value}`,
-          subTitle: 'Hello'
+          percent: 80,
+          title: d => `${d}`
         }}
         style={style}
       />
@@ -69,48 +46,23 @@ ReactDOM.render(<App />, document.querySelector('#app'))
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QGauge } from 'qcharts-react'
 
 function App() {
-  const data = [
-    {
-      value: 7.3
-    }
-  ]
-  const dataFields = {
-    value: 'value'
-  }
-  const size = ['100%', '100%']
-  const forceFit = true
-
   const style = {
     title: { fontSize: 36 }
   }
-
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Gauge
+    <QChart>
+      <QGauge
         {...{
           min: 0,
-          max: 10,
-          tickStep: 1,
+          max: 100,
+          tickStep: 10,
           tickLength: 10,
+          percent: 40,
           labelOffset: 20,
-          title: d => `${d.value}`,
-          subTitle: 'Hello'
+          title: d => `${d}`
         }}
         style={style}
       />

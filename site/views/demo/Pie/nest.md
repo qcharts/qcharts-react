@@ -43,8 +43,6 @@ function App() {
     row: 'name',
     value: 'value'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
 
   const pieStyle = {
     text: attrs => ({ color: '#fff', text: attrs.name })

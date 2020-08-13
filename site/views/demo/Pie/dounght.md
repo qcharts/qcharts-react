@@ -67,8 +67,6 @@ function App() {
     row: 'year',
     value: 'population'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
 
   const pieStyle = {
     sector: { lineWidth: 1, strokeColor: '#fff' },
@@ -86,7 +84,7 @@ function App() {
   }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
+    <QChart data={data} dataFields={dataFields}>
       <QPie
         style={pieStyle}
         radius={0.7}

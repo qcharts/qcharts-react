@@ -5,20 +5,7 @@
 ```javascript
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {
-  QChart,
-  QArea,
-  QLine,
-  QPie,
-  QBar,
-  QRadar,
-  QScatter,
-  QGauge,
-  QFunnel,
-  QAxis,
-  QLegend,
-  QTooltip
-} from 'qcharts-react'
+import { QChart, QScatter, QLegend, QTooltip, QAxis } from 'qcharts-react'
 
 function App() {
   const data = [
@@ -258,24 +245,16 @@ function App() {
     text: 'height',
     value: 'weight'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
+
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Scatter />
+    <QChart data={data} dataFields={dataFields}>
+      <QScatter />
       <QLegend align={['center', 'bottom']} />
       <QAxis />
       <QAxis orient={'left'} />
-      <QTooltip
-        {...{
-          title: data => data[0].gender,
-          formatter: data => {
-            return `身高：${data.height}CM  体重：${data.weight}KG `
-          }
-        }}
-      />
+      <QTooltip />
     </QChart>
   )
 }

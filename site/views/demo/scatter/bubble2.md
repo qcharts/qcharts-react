@@ -449,13 +449,12 @@ function App() {
     text: 'GDP',
     value: 'LifeExpectancy'
   }
-  const size = ['100%', '100%']
-  const forceFit = true
+
   const axisStyle = { axis: false, scale: false }
 
   return (
-    <QChart data={data} dataFields={dataFields} size={size} forceFit={forceFit}>
-      <Scatter
+    <QChart data={data} dataFields={dataFields}>
+      <QScatter
         {...{
           areaField: 'Population',
           areaRange: [4, 30],
