@@ -1,6 +1,6 @@
 {
   "name": "qcharts-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A powerful React chart library based on qcharts",
   "main": "lib/index.js",
   "scripts": {

@@ -15,6 +15,7 @@ import scatterRoutes from './scatter'
 import gaugeRoutes from './Gauge/routes'
 import VisualLinksRoutes from './VisualLink/routes'
 import PolarBarRoutes from './PolarBar/routes'
+import WaveRoutes from './Wave/routes'
 
 export default [
   {
@@ -67,12 +68,12 @@ export default [
     children: scatterRoutes
   },
 
-  // {
-  //   title: '进度图',
-  //   path: 'progress',
-  //   component: generateCommonPage('/demo/progress/', ProgressRoutes),
-  //   children: ProgressRoutes
-  // },
+  {
+    title: '水波图',
+    path: 'wave',
+    component: generateCommonPage('/demo/wave/', WaveRoutes),
+    children: WaveRoutes
+  },
 
   {
     title: '漏斗图',

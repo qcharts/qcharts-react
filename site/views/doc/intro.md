@@ -22,12 +22,13 @@
 | `<QArea />`      | Visual 组件 | 绘制面积图图形             |
 | `<QBar />`       | Visual 组件 | 绘制柱状图（或条形图）图形 |
 | `<QPie />`       | Visual 组件 | 绘制饼图图形               |
-| `<ArcPie />`     | Visual 组件 | 绘制弧饼图图形             |
+| `<QGauge />`     | Visual 组件 | 绘制弧饼图图形             |
 | `<QRadar />`     | Visual 组件 | 绘制雷达图图形             |
 | `<QScatter />`   | Visual 组件 | 绘制散点图图图形           |
 | `<QFunnel />`    | Visual 组件 | 绘制漏斗图图形             |
-| `<QGauge />`     | Visual 组件 | 绘制仪表盘图形             |
+| `<QWave />`      | Visual 组件 | 水波图                     |
 | `<QRadialBar />` | Visual 组件 | 绘制玉玦图图形             |
+| `<QPolarBar />`  | Visual 组件 | 南丁格尔图                 |
 
 ### Plugin 组件
 

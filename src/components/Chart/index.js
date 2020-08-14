@@ -56,7 +56,6 @@ export class Chart extends PureComponent {
     const data = this.getData()
     const dataFields = this.getDataFields()
     const { theme } = this.props
-    console.log(theme)
     const chart = (this.chart = new qcharts.Chart({
       container: this.domElementWrap,
       ...this.props
