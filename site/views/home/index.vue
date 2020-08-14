@@ -3,7 +3,7 @@
     <div class="desr">
       Qcharts-React 是一个基于
       <a href="https://www.spritejs.com/">spritejs</a> ,
-      <a href="hhttps://www.qcharts.cn/">QCharts</a>
+      <a href="https://www.qcharts.cn">QCharts</a>
       封装的图表库，可以让用户以组件的形式组合出各种图表。如果你使用Js或者Vue，可以使用
       <a href="https://www.qcharts.cn">QCharts</a> 或
       <a href="https://www.qcharts.cn/qcharts-vue/">Qcharts-Vue</a>
